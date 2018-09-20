@@ -1,0 +1,120 @@
+@import "~bootstrap/scss/bootstrap";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #fff;
+    background-image: url("./images/elk.jpg");
+    background-repeat: no-repeat;
+}
+
+button {
+    padding: 1rem;
+    /* position: relative;*/
+    width: 6rem;
+    /* margin-right: 30px;*/
+    border: 1px solid dodgerblue;
+    background-color: dodgerblue;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+button:hover{
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);
+}
+
+section:nth-of-type(1) {
+    min-height: 6rem;
+    border: 1px solid #eeeff6;
+    /* position: relative;*/
+}
+
+section:nth-of-type(1) div {
+    /*  position: absolute;
+    height: 50px;
+    background-color: aliceblue;
+    padding: 16px;
+    top: 50%;
+    transform: translateY(-50%);*/
+    height: 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section:nth-of-type(2) {
+    min-height: 4rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 1px solid #eeeff6;
+}
+
+section>div.listItems>ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    padding: 0
+}
+
+section>div.listItems>ul li {
+    border: .5px solid dodgerblue;
+    padding: 1rem;
+    flex-basis: 20%;
+    text-align: center;
+    transition: background-color 1000ms ease-out;
+}
+
+section>div.listItems>ul li:hover {
+    background-color: #eeeff6;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);
+}
+
+section>div.listItems>ul li:nth-of-type(2) {
+    flex: 1;
+}
+
+div.extraDiv p:nth-of-type(2) {
+    color: red;
+}
+
+div.grid-wrapper>ul {
+    display: grid;
+    /*grid-template-columns: 180px 180px 180px;*/
+    grid-template-columns: repeat(3,1fr);
+    
+    grid-gap:1rem;
+    grid-auto-rows: minmax(100px, auto);
+    list-style: none;
+    background-color: #fff;
+    align-content: center;
+    color: #444;
+    align-content: space-evenly;
+}
+
+div.grid-wrapper>ul li {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 400ms ease-in;
+}
+div.grid-wrapper>ul li:nth-child(odd){
+    background-color: #ddd;
+    color: #444;
+    transition: background-color 400ms ease-in;
+}
+div.grid-wrapper>ul li:nth-child(odd):hover{
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,.2), 0 0 0 1px rgba(0,0,0,.08);
+}
+div.grid-wrapper>ul li:hover {
+    background-color: #ddd;
+    color: #444;
+}
